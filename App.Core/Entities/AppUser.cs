@@ -1,5 +1,5 @@
-﻿using App.Core.Entities.Base;
-using Microsoft.AspNet.Identity.EntityFramework;
+﻿using Microsoft.AspNetCore.Identity;
+using App.Core.Entities.Base;
 
 namespace App.Core.Entities
 {
@@ -12,6 +12,5 @@ namespace App.Core.Entities
         public DateTime CreationDate { get; set; }
         public DateTime LastUpdatedDate { get; set; }
         public RecordStatus RecordStatus { get; set; }
-
     }
 }

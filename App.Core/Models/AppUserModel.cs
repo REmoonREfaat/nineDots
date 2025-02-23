@@ -15,8 +15,6 @@ namespace App.Core.Models
         [StringLength(6, MinimumLength = 6, ErrorMessage = "PIN must be exactly 6 digits")]
         [RegularExpression(@"^\d{6}$", ErrorMessage = "PIN must contain only numbers")]
         public string PIN { get; set; }
-
-        public string Token { get; set; }
-
+        public bool BiometricEnabled { get; set; }
     }
 }

@@ -230,7 +230,7 @@ namespace App.Core.Services
         }
 
 
-        public async Task<ResponseModel<BooleanResultDTO>> UpdateUser(AppUserModel model)
+        public async Task<ResponseModel<BooleanResultDTO>> UpdateUserAsync(AppUserModel model)
         {
             try
             {
@@ -295,7 +295,7 @@ namespace App.Core.Services
             }
         }
 
-        public async Task<ResponseModel<BooleanResultDTO>> DeleteUser(string id)
+        public async Task<ResponseModel<BooleanResultDTO>> DeleteUserAsync(string id)
         {
 
             try
@@ -350,6 +350,10 @@ namespace App.Core.Services
             return newuser;
         }
 
+        public async Task<AppUser> GetUserByPhoneNumber(string phoneNumber)
+        {
+            return _userManager.Users.Where(x => x.PhoneNumber == phoneNumber).FirstOrDefault();
+        }
 
         static string GenerateOTP()
         {

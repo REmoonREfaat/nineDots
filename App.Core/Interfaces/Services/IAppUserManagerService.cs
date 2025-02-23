@@ -8,7 +8,7 @@ namespace App.Core.Interfaces.Services
         Task<ResponseModel<BooleanResultDTO>> AddUserAsync(AppUserModel model);
         Task<ResponseModel<BooleanResultDTO>> ActivatePhoneNumberOTPAsync(string icNumber, string code);
         Task<ResponseModel<BooleanResultDTO>> ActivateEmailOTPAsync(string icNumber, string code);
-        Task<ResponseModel<BooleanResultDTO>> UpdateUser(AppUserModel model);
-        Task<ResponseModel<BooleanResultDTO>> DeleteUser(string id);
+        Task<ResponseModel<BooleanResultDTO>> UpdateUserAsync(AppUserModel model);
+        Task<ResponseModel<BooleanResultDTO>> DeleteUserAsync(string id);
     }
 }
