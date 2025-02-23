@@ -37,12 +37,12 @@ namespace App.Core.Identity
             }
             return user;
         }
-        public override async Task<AppUser> FindByNameAsync(string userName)
+        public override async Task<AppUser> FindByNameAsync(string icNumber)
         {
-            var user = await Users.FirstOrDefaultAsync(u => u.UserName == userName);
+            var user = await Users.FirstOrDefaultAsync(u => u.UserName == icNumber);
             if (user == null)
             {
-                Logger.LogWarning($"User with username {userName} was not found.");
+                Logger.LogWarning($"User with IC Number {icNumber} was not found.");
             }
             return user;
         }
